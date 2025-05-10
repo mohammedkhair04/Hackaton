@@ -1,0 +1,95 @@
+I can see the hackathon document clearly in the images. This appears to be the "AI Innovators Hackathon 2025" focused on building a Smart Financial Advisor system. Let me summarize the key information I can see:
+Challenge Overview
+You're tasked with building a conversational financial analysis agent that uses Retrieval Augmented Generation (RAG) or database chat capabilities to analyze retail transaction data from multiple mall locations in Jordan. Your solution may leverage autonomous workflow tools (like n8n, Make or Rashed) to automate data processing and actions based on user queries.
+Dataset Provided
+
+Retail transaction records from multiple mall locations in Jordan
+Format: CSV with the following fields:
+
+transaction_id: Unique identifier with format JO-DATE-XXXX-XXXXX
+mall_name: Name of the mall (Z Mall, C Mall, Y Mall, etc.)
+branch_name: Specific branch location (Al Bayader, Amman, Gardens, etc.)
+transaction_date: Date and time in DD/MM/YYYY HH format
+tax_amount: Tax charged on the transaction
+transaction_amount: Total amount of the transaction
+transaction_type: Type of transaction (Sale, Refund)
+transaction_status: Status of the transaction (Failed, Completed)
+
+
+
+Objectives
+
+Build a RAG system or database chat interface that allows users to:
+
+Query transaction data using natural language
+Ask complex analytical questions about sales performance
+Request insights on transaction patterns and anomalies
+Generate reports through conversation
+
+
+Implement semantic retrieval that can:
+
+Understand and interpret financial queries
+Extract relevant transaction data based on user questions
+Provide context-aware responses with supporting data
+Handle follow-up questions with memory of previous context
+
+
+Create autonomous workflows that:
+
+Automate data processing tasks based on user queries
+Set up scheduled analyses and reports
+Create alert systems for transaction anomalies
+Connect to other systems or services as needed
+
+
+
+Technical Requirements
+
+Vectorize transaction data for semantic retrieval
+Implement embeddings-based search for accurate data retrieval
+Build a natural language interface for database queries
+Create a knowledge base from transaction patterns and insights
+Develop prompt engineering templates for financial analysis
+Include data citation in responses (reference specific transactions)
+Set up automated workflows using tools like n8n, Make (Integromat), or similar platforms
+Utilize LangChain and LangGraph for building LLM-powered applications with structured workflows
+
+Implementation Options
+RAG Approach:
+
+Vector database (Pinecone, Weaviate, etc.) for transaction data
+Embedding model for query and data vectorization
+LLM for response generation with retrieved context
+Query routing and decomposition systems
+LangChain for building RAG pipelines
+
+Database Chat Approach:
+
+SQL generation from natural language queries
+Database connector to transaction data store
+Result interpretation and natural language response generation
+Memory system for multi-turn conversations
+LangChain SQLDatabaseChain or SQL agents
+
+Workflow Automation
+
+Rashed, n8n, Make (Integromat), or similar workflow automation tools
+Scheduled data processing and analysis
+Event-triggered workflows based on data patterns
+Integration with notification systems
+LangGraph for creating multi-step agent workflows with state management
+
+Deliverables
+
+Working conversational financial analysis application
+Automated workflow configuration for data processing and actions
+GitHub repository with documentation that includes a 2-3 minute demo video showing sample queries and automated workflows, and evaluation metrics on query accuracy and relevance.
+
+Judging Criteria
+
+Query understanding & retrieval accuracy (25 points)
+Response quality & actionable insights (20 points)
+Workflow automation implementation (25 points)
+Technical implementation (20 points)
+Documentation & reproducibility (10 points)

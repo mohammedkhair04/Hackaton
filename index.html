@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Financial Advisor</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: auto;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        textarea {
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            min-height: 80px;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .results {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e9ecef;
+            border-radius: 4px;
+        }
+        .results h2 {
+            margin-top: 0;
+        }
+        .transaction {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+        .transaction:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        .transaction p {
+            margin: 5px 0;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Financial Advisor</h1>
+        
+        <form action="/query" method="post">
+            <label for="query_text">Ask a question about your transactions:</label>
+            <textarea id="query_text" name="query_text" rows="3" placeholder="e.g., Show me failed sales at Z Mall last week"></textarea>
+            <input type="submit" value="Get Insights">
+        </form>
+
+        <div class="results" id="query-results-section">
+            <h2>Query Results</h2>
+            <p>Submit a query to see results here.</p>
+            <!-- Results will be dynamically inserted here by Flask -->
+        </div>
+
+        <hr style="margin: 30px 0;">
+
+        <h2>Autonomous Workflows</h2>
+        <form action="/run_anomaly_detection" method="post">
+            <p>Click the button below to run the anomaly detection workflow. This will check for unusual transaction patterns and high failure rates.</p>
+            <input type="submit" value="Run Anomaly Detection">
+        </form>
+
+        <div class="results" id="anomaly-results-section">
+            <h2>Anomaly Detection Results</h2>
+            <p>Run the workflow to see results here.</p>
+            <!-- Anomaly results will be dynamically inserted here by Flask -->
+        </div>
+
+    </div>
+</body>
+</html>
+
